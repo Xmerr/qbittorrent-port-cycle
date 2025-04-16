@@ -1,12 +1,12 @@
 {
-  "name": "qbittorrent-port-changer",
+  "name": "qbittorrent-port-cycle",
   "version": "1.0.0",
   "type": "module",
   "description": "Automatically changes qBittorrent listening port periodically",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "image": "docker build -t qbittorrent-port-changer .",
+    "image": "docker build -t xmer/qbittorrent-port-cycle .",
     "start": "node dist/index.js",
     "dev": "node --loader ts-node/esm src/index.ts"
   },
