@@ -39,6 +39,10 @@ class DiscordWebhookTransport extends TransportStream {
             }]
         };
 
+        if (!this.webhookUrl) {
+            return;
+        }
+
         // Send to Discord webhook
         axios.post(this.webhookUrl, discordMessage)
             .catch(error => {
