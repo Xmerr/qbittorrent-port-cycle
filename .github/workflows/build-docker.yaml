@@ -27,3 +27,11 @@ jobs:
           username: xmer
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
           repository: xmer/qbittorrent-port-cycle
+
+      # Pause for 30 seconds
+      - name: Pause
+        run: sleep 30
+
+      - name: Run Watchtower
+        run: |
+          curl --location 'https://watchtower.xmer.pw/v1/update' --header 'Authorization: Bearer ${{ secrets.WATCHTOWER_TOKEN }}'

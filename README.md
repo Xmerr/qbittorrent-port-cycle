@@ -1,6 +1,6 @@
 # qBittorrent Port Fix
 
-[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/xmerr/qbittorrent-port-cycle) :: [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-Repository-blue)](https://hub.docker.com/r/xmer/qbittorrent-port-cycle)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/xmerr/qbittorrent-port-cycle)  [![Docker Hub](https://img.shields.io/badge/Docker%20Hub-Repository-blue)](https://hub.docker.com/r/xmer/qbittorrent-port-cycle)
 
 This project automatically changes the listening port in qBittorrent at regular intervals to help maintain optimal connectivity and avoid potential port blocking issues.
 
