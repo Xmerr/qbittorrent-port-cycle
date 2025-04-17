@@ -40,7 +40,7 @@ RUN echo '#!/bin/sh' > /app/run-cron.sh && \
 
 # Create cron tab
 RUN echo '#!/bin/sh' > /app/setup-cron.sh && \
-    echo 'echo "0 */${CHANGE_INTERVAL:-3} * * * /app/run-cron.sh >> /app/logs/cron.log 2>&1" > /etc/crontabs/root' >> /app/run-cron.sh && \
+    echo 'echo "*/${CHANGE_INTERVAL:-3} * * * * /app/run-cron.sh >> /app/logs/cron.log 2>&1" > /etc/crontabs/root' >> /app/setup-cron.sh && \
     chmod +x /app/setup-cron.sh
 
 # Create logs directory
