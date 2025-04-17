@@ -1,0 +1,19 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish_image:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Docker Image
+        run: docker build -t xmer/qbittorrent-port-cycle:latest .
+
+      - name: Push Docker Image
+        run: docker push xmer/qbittorrent-port-cycle:latest
