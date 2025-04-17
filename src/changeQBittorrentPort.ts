@@ -10,7 +10,7 @@ const qbt = new QBittorrent({
     password: QBITTORRENT_PASSWORD
 });
 
-export async function changeQBittorrentPort(): Promise<void> {
+export async function changeQBittorrentPort(): Promise<Number> {
     try {
         logger.info('Attempting to connect to qBittorrent...');
         
@@ -25,6 +25,7 @@ export async function changeQBittorrentPort(): Promise<void> {
         await qbt.setPreferences({ listen_port: newPort });
 
         logger.info(`Successfully changed port from ${currentPort} to ${newPort}`);
+        return newPort;
 
     } catch (error: any) {
         logger.error('Error changing qBittorrent port:', error);
@@ -34,6 +35,7 @@ export async function changeQBittorrentPort(): Promise<void> {
             error: error.message
         });
     }
+    return -1;
 } 
 
 export default changeQBittorrentPort;
