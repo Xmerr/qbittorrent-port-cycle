@@ -14,6 +14,7 @@ This project automatically changes the listening port in qBittorrent at regular 
 | `MIN_PORT` | Minimum port number to use | No | 49152 |
 | `MAX_PORT` | Maximum port number to use | No | 65535 |
 | `CHANGE_INTERVAL` | Time interval between port changes in hours | No | 3 |
+| `WEBHOOK_URL` | Discord webhook URL for logging notifications | No | - |
 
 ## Docker Usage
 
@@ -25,6 +26,7 @@ docker run -d \
     -e QBITTORRENT_HOST=http://localhost:8080 \
     -e QBITTORRENT_USERNAME=admin \
     -e QBITTORRENT_PASSWORD=adminadmin \
+    -e WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url \
     --restart unless-stopped \
     xmer/qbittorrent-port-cycle:latest
 ```
@@ -47,5 +49,6 @@ services:
       - MIN_PORT=49152
       - MAX_PORT=65535
       - CHANGE_INTERVAL=3
+      - WEBHOOK_URL=https://discord.com/api/webhooks/your-webhook-url
     restart: unless-stopped
 ```
