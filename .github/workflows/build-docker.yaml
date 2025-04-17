@@ -16,4 +16,6 @@ jobs:
         run: docker build -t xmer/qbittorrent-port-cycle:latest .
 
       - name: Push Docker Image
-        run: docker push xmer/qbittorrent-port-cycle:latest
+        run: |
+          docker login -u xmer -p ${{ secrets.DOCKER_HUB_TOKEN }}
+          docker push xmer/qbittorrent-port-cycle:latest
