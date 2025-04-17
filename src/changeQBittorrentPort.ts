@@ -12,7 +12,7 @@ const qbt = new QBittorrent({
 
 export async function changeQBittorrentPort(): Promise<Number> {
     try {
-        logger.info('Attempting to connect to qBittorrent...');
+        logger.verbose('Attempting to connect to qBittorrent...');
         
         // Get current preferences
         const preferences = await qbt.getPreferences();

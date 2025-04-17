@@ -13,3 +13,6 @@ export const MAX_PORT = parseInt(process.env.MAX_PORT || '65535', 10);
 
 // Time between port changes (in hours)
 export const CHANGE_INTERVAL = parseInt(process.env.CHANGE_INTERVAL || '3', 10);
+
+// Webhook URL
+export const WEBHOOK_URL = process.env.WEBHOOK_URL;

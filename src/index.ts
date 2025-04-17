@@ -2,10 +2,10 @@ import { logger } from './logger.js';
 import { changeQBittorrentPort } from './changeQBittorrentPort.js';
 
 async function main(): Promise<void> {
-    logger.info('Starting qBittorrent Port Changer');
+    logger.verbose('Starting qBittorrent Port Changer');
     try {
         await changeQBittorrentPort();
-        logger.info('Port change completed successfully');
+        logger.verbose('Port change completed successfully');
     } catch (error) {
         logger.error('Error changing port:', error);
         process.exit(1);
