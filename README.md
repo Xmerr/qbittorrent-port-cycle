@@ -13,7 +13,7 @@ This project automatically changes the listening port in qBittorrent at regular 
 | `QBITTORRENT_PASSWORD` | Password for qBittorrent Web UI authentication | Yes | - |
 | `MIN_PORT` | Minimum port number to use | No | 49152 |
 | `MAX_PORT` | Maximum port number to use | No | 65535 |
-| `CHANGE_INTERVAL` | Time interval between port changes in minutes | No | 360 |
+| `CHANGE_INTERVAL` | Time interval between port changes in minutes | No | 720 |
 | `WEBHOOK_URL` | Discord webhook URL for logging notifications | No | - |
 
 ## Docker Usage
